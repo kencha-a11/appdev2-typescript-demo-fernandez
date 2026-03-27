@@ -1,6 +1,19 @@
 {
   "compilerOptions": {
     "strict": true,
-    "noEmitOnError": true,
+    "noEmitOnError": true
   },
+  "files": [
+    "./01-basics.ts",
+    "./03-flexibile-types.ts",
+    "./04-arrays-objects.ts",
+    "./05-enum.ts",
+    "./06-alternative-to-enum.ts",
+    "./07-custom-type-role.ts",
+    "./08-functions.ts",
+    "./09-special-types.ts",
+    "./10-type-narrowing.ts",
+    "./11-optional.ts",
+    "./js-demo-app/calculator.ts"
+  ]
 }
