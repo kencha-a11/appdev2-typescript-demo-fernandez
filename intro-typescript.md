@@ -60,5 +60,11 @@ Defeats TypeScript's purpose - eliminates the main benefit of using TypeScript
 ## 04-arrays-objects.ts
 Covers arrays with union types, object typing with nested properties, and the `Record` type for flexible objects.
 
+Arrays with union types – arrays that can hold multiple specific types, providing flexibility while maintaining type safety.
+
+bject typing with nested properties – defining complex object shapes where properties can themselves be objects with their own type definitions.
+
+Record type – a utility type that creates object types with consistent key-value pairs, useful for dictionaries or flexible structures.
+
 ## 05-enum.ts
 Introduces enums, specifically string enums, and shows how to assign `enum` values properly.
