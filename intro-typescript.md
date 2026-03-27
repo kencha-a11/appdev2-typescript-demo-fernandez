@@ -37,72 +37,89 @@ tsc filename.ts
 ## 01-basics.ts
 Demonstrates **type inference**, **explicit typing**, and what happens when assigning mismatched types.
 
-Type inference - works by assigning value in variable, TypeScript auto assigns its type implicitly based on the default primitive of data.
+  Type inference - works by assigning value in variable, TypeScript auto assigns its type implicitly based on the default primitive of data.
 
-Explicit typing - manually declaring the type using colon syntax after the variable name.
+  Explicit typing - manually declaring the type using colon syntax after the variable name.
 
-Type mismatch - when assigning a value type that doesn't match the declared or inferred type, TypeScript throws an error, making it invalid by default.
+  Type mismatch - when assigning a value type that doesn't match the declared or inferred type, TypeScript throws an error, making it invalid by default.
 
 ## 02-vanilla-js-types.js
 Shows how JavaScript’s `typeof` operator works to check variable types at runtime.
 
-typeof returns a string indicating the type of the operand.
+  typeof returns a string indicating the type of the operand.
 
-When placed before a value or variable, typeof returns a string indicating the data type. This is evaluated when the code runs, not during the initial parsing.
+  When placed before a value or variable, typeof returns a string indicating the data type. This is evaluated when the code runs, not during the initial parsing.
 
 ## 03-flexible-types.ts
 Illustrates the `any` type, allowing reassignment to different types and showing its flexibility (and risks).
 
-any is a TypeScript type that disables type checking for a variable, allowing it to hold any JavaScript value - strings, numbers, booleans, objects, arrays, or functions - and be reassigned freely between different types without compiler errors.
+  any is a TypeScript type that disables type checking for a variable, allowing it to hold any JavaScript value - strings, numbers, booleans, objects, arrays, or functions - and be reassigned freely between different types without compiler errors.
 
-Defeats TypeScript's purpose - eliminates the main benefit of using TypeScript
+  Defeats TypeScript's purpose - eliminates the main benefit of using TypeScript
 
 ## 04-arrays-objects.ts
 Covers arrays with union types, object typing with nested properties, and the `Record` type for flexible objects.
 
-Arrays with union types – arrays that can hold multiple specific types, providing flexibility while maintaining type safety.
+  Arrays with union types – arrays that can hold multiple specific types, providing flexibility while maintaining type safety.
 
-bject typing with nested properties – defining complex object shapes where properties can themselves be objects with their own type definitions.
+  bject typing with nested properties – defining complex object shapes where properties can themselves be objects with their own type definitions.
 
-Record type – a utility type that creates object types with consistent key-value pairs, useful for dictionaries or flexible structures.
+  Record type – a utility type that creates object types with consistent key-value pairs, useful for dictionaries or flexible structures.
 
 ## 05-enum.ts
 Introduces enums, specifically string enums, and shows how to assign `enum` values properly.
 
-TypeScript feature that allows you to define a set of named constants, making code more readable and self-documenting.
+  TypeScript feature that allows you to define a set of named constants, making code more readable and self-documenting.
 
-Each member must be initialized with a string or computed value
+  Each member must be initialized with a string or computed value
 
-Useful when you need meaningful string values for serialization or logging.
+  Useful when you need meaningful string values for serialization or logging.
 
 ## 06-alternative-to-enum.ts
-This file demonstrates using union of string literal types as an alternative to TypeScript enums.
+  This file demonstrates using union of string literal types as an alternative to TypeScript enums.
 
-Instead of defining an enum, you directly list the allowed values as a union type.
+  Instead of defining an enum, you directly list the allowed values as a union type.
 
-his approach is often preferred in modern TypeScript because it keeps the type system lightweight without generating runtime JavaScript code
+  his approach is often preferred in modern TypeScript because it keeps the type system lightweight without generating runtime JavaScript code
 
 ## 07-custom-type-role.ts
-introduces type aliases custom types using the type keyword.
+  introduces type aliases custom types using the type keyword.
 
-Type aliases allow you to create reusable, descriptive names for any type—whether primitive, union, object, or complex shape.
+  Type aliases allow you to create reusable, descriptive names for any type—whether primitive, union, object, or complex shape.
 
-This improves code readability and maintainability.
+  This improves code readability and maintainability.
 
 ## 08-functions.ts
-Return type inference works, but explicit annotations improve readability and catch errors early.
+  Return type inference works, but explicit annotations improve readability and catch errors early.
 
-void is the default for functions that don’t explicitly return a value (but you should still annotate it).
+  void is the default for functions that don’t explicitly return a value (but you should still annotate it).
 
-never is rarely used but valuable for functions that throw or loop forever.
+  never is rarely used but valuable for functions that throw or loop forever.
 
-Function types are written as (param: type) => returnType. Prefer this over the generic Function type for better type safety.
+  Function types are written as (param: type) => returnType. Prefer this over the generic Function type for better type safety.
 
-Object methods can be typed using either the arrow syntax (method: () => type) or the shorthand method syntax (method(): type). Both work; pick whichever fits your style.
+  Object methods can be typed using either the arrow syntax (method: () => type) or the shorthand method syntax (method(): type). Both work; pick whichever fits your style.
 
 ## 09-special-types.ts
-null represents an intentional absence of a value.
+  null represents an intentional absence of a value.
 
-undefined indicates that a variable has been declared but not yet assigned a value.
+  undefined indicates that a variable has been declared but not yet assigned a value.
 
-strictNullChecks is enabled (which is the default in most modern projects), you must explicitly include null or undefined in a union if you want to allow those values.
+  strictNullChecks is enabled (which is the default in most modern projects), you must explicitly include null or undefined in a union if you want to allow those values.
+
+## 10-form.html and 10-type-narrowing.ts
+  type narrowing—the process of refining a variable’s type to a more specific one based on runtime checks.
+
+  The code focuses on safely accessing DOM elements that could be null and using TypeScript’s tools (!, ?., as) to handle such cases.
+
+  Type Guard with if
+  Checking if an element exists before accessing its properties.
+
+  Non‑null Assertion Operator (!)
+  Tells TypeScript “I am certain this value is not null or undefined.” Use sparingly—only when you are absolutely sure.
+
+  Optional Chaining (?.)
+  Safely accesses properties only if the object is not null/undefined. Returns undefined if the chain fails.
+
+  Type Casting / Assertion (as)
+  Tells TypeScript to treat a value as a specific type (e.g., HTMLInputElement) to access element‑specific properties.

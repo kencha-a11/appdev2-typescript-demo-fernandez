@@ -1,12 +1,12 @@
-const inputEl = document.getElementById('user-name')
+// const inputEl = document.getElementById('user-name')
 
-console.log(inputEl.value) // This line is unsafe because inputEl might be null
+// console.log(inputEl.value) // This line is unsafe because inputEl might be null
 
-if (!inputEl) {
-    throw new Error('Element not found!');
-}
+// if (!inputEl) {
+//     throw new Error('Element not found!');
+// }
 
-console.log(inputEl.value)
+// console.log(inputEl.value)
 
 // You can convince TypeScript that you are sure the value will not be null by using the non-null assertion operator `!`
 // You can use the optional chaining `?.` operator to safely check if value is not null before the next operation
@@ -20,4 +20,5 @@ console.log(inputEl.value)
 
 
 // Type Casting or Assertion
-// const inputEl = document.getElementById('user-name') as HTMLInputElement | null
+const inputEl = document.getElementById('user-name') as HTMLInputElement | null
+console.log(inputEl)
