@@ -88,3 +88,14 @@ introduces type aliases custom types using the type keyword.
 Type aliases allow you to create reusable, descriptive names for any type—whether primitive, union, object, or complex shape.
 
 This improves code readability and maintainability.
+
+## 08-functions.ts
+Return type inference works, but explicit annotations improve readability and catch errors early.
+
+void is the default for functions that don’t explicitly return a value (but you should still annotate it).
+
+never is rarely used but valuable for functions that throw or loop forever.
+
+Function types are written as (param: type) => returnType. Prefer this over the generic Function type for better type safety.
+
+Object methods can be typed using either the arrow syntax (method: () => type) or the shorthand method syntax (method(): type). Both work; pick whichever fits your style.

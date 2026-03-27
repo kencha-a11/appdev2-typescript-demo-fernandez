@@ -47,8 +47,8 @@
     }
 
     let user: User = {
-        name: "Elmer",
-        age: 39,
+        name: "Aljon",
+        age: 22,
         // greet: function() {
         //     return this.name
         // }
@@ -60,3 +60,55 @@
 
     user.greet()
 })
+
+const practice1 = () => {
+    // ---- Return type annotations ----
+    function multiply(x: number, y: number): number {
+        return x * y;
+    }
+    console.log('Multiply 3 * 4 =', multiply(3, 4));
+
+    // ---- void ----
+    function showResult(result: number): void {
+        console.log(`The result is: ${result}`);
+    }
+    showResult(multiply(5, 6));
+
+    // ---- never ----
+    function fail(message: string): never {
+        throw new Error(message);
+    }
+    // Uncommenting the next line would stop the program
+    // fail("Something went wrong");
+
+    // ---- Function type (callback) ----
+    type Callback = (data: string) => void;
+    function fetchData(cb: Callback): void {
+        setTimeout(() => {
+            cb("Data received!");
+        }, 1000);
+    }
+
+    const handleData = (msg: string): void => {
+        console.log(`Callback says: ${msg}`);
+    };
+    fetchData(handleData);
+
+    // ---- Object methods ----
+    type Calculator = {
+        add: (a: number, b: number) => number;
+        subtract(a: number, b: number): number;  // alternative syntax
+    };
+
+    const calc: Calculator = {
+        add: (a, b) => a + b,
+        subtract(a, b) {
+            return a - b;
+        }
+    };
+    console.log(`10 + 5 = ${calc.add(10, 5)}`);
+    console.log(`10 - 5 = ${calc.subtract(10, 5)}`);
+};
+
+// Call the function to see the output
+practice1();
