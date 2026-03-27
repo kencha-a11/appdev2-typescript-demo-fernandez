@@ -75,3 +75,9 @@ Each member must be initialized with a string or computed value
 
 Useful when you need meaningful string values for serialization or logging.
 
+## 06-alternative-to-enum.ts
+This file demonstrates using union of string literal types as an alternative to TypeScript enums.
+
+Instead of defining an enum, you directly list the allowed values as a union type.
+
+his approach is often preferred in modern TypeScript because it keeps the type system lightweight without generating runtime JavaScript code
