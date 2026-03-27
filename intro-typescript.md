@@ -37,59 +37,74 @@ tsc filename.ts
 ## 01-basics.ts
 Demonstrates **type inference**, **explicit typing**, and what happens when assigning mismatched types.
 
+  ```
   Type inference - works by assigning value in variable, TypeScript auto assigns its type implicitly based on the default primitive of data.
 
   Explicit typing - manually declaring the type using colon syntax after the variable name.
 
   Type mismatch - when assigning a value type that doesn't match the declared or inferred type, TypeScript throws an error, making it invalid by default.
+  ```
 
 ## 02-vanilla-js-types.js
 Shows how JavaScript’s `typeof` operator works to check variable types at runtime.
 
+  ```
   typeof returns a string indicating the type of the operand.
 
   When placed before a value or variable, typeof returns a string indicating the data type. This is evaluated when the code runs, not during the initial parsing.
+  ```
 
 ## 03-flexible-types.ts
 Illustrates the `any` type, allowing reassignment to different types and showing its flexibility (and risks).
 
+  ```
   any is a TypeScript type that disables type checking for a variable, allowing it to hold any JavaScript value - strings, numbers, booleans, objects, arrays, or functions - and be reassigned freely between different types without compiler errors.
 
   Defeats TypeScript's purpose - eliminates the main benefit of using TypeScript
+  ```
 
 ## 04-arrays-objects.ts
 Covers arrays with union types, object typing with nested properties, and the `Record` type for flexible objects.
 
+  ```
   Arrays with union types – arrays that can hold multiple specific types, providing flexibility while maintaining type safety.
 
   bject typing with nested properties – defining complex object shapes where properties can themselves be objects with their own type definitions.
 
   Record type – a utility type that creates object types with consistent key-value pairs, useful for dictionaries or flexible structures.
+  ```
 
 ## 05-enum.ts
 Introduces enums, specifically string enums, and shows how to assign `enum` values properly.
 
+  ```
   TypeScript feature that allows you to define a set of named constants, making code more readable and self-documenting.
 
   Each member must be initialized with a string or computed value
 
   Useful when you need meaningful string values for serialization or logging.
+  ```
 
 ## 06-alternative-to-enum.ts
-  This file demonstrates using union of string literal types as an alternative to TypeScript enums.
+This file demonstrates using union of string literal types as an alternative to TypeScript enums.
 
+  ```
   Instead of defining an enum, you directly list the allowed values as a union type.
 
-  his approach is often preferred in modern TypeScript because it keeps the type system lightweight without generating runtime JavaScript code
+  this approach is often preferred in modern TypeScript because it keeps the type system lightweight without generating runtime JavaScript code
+  ```
 
 ## 07-custom-type-role.ts
-  introduces type aliases custom types using the type keyword.
+introduces type aliases custom types using the type keyword.
 
+  ```
   Type aliases allow you to create reusable, descriptive names for any type—whether primitive, union, object, or complex shape.
 
   This improves code readability and maintainability.
+  ```
 
 ## 08-functions.ts
+  ```
   Return type inference works, but explicit annotations improve readability and catch errors early.
 
   void is the default for functions that don’t explicitly return a value (but you should still annotate it).
@@ -99,15 +114,19 @@ Introduces enums, specifically string enums, and shows how to assign `enum` valu
   Function types are written as (param: type) => returnType. Prefer this over the generic Function type for better type safety.
 
   Object methods can be typed using either the arrow syntax (method: () => type) or the shorthand method syntax (method(): type). Both work; pick whichever fits your style.
+  ```
 
 ## 09-special-types.ts
+  ```
   null represents an intentional absence of a value.
 
   undefined indicates that a variable has been declared but not yet assigned a value.
 
   strictNullChecks is enabled (which is the default in most modern projects), you must explicitly include null or undefined in a union if you want to allow those values.
+  ```
 
 ## 10-form.html and 10-type-narrowing.ts
+  ```
   type narrowing—the process of refining a variable’s type to a more specific one based on runtime checks.
 
   The code focuses on safely accessing DOM elements that could be null and using TypeScript’s tools (!, ?., as) to handle such cases.
@@ -123,10 +142,13 @@ Introduces enums, specifically string enums, and shows how to assign `enum` valu
 
   Type Casting / Assertion (as)
   Tells TypeScript to treat a value as a specific type (e.g., HTMLInputElement) to access element‑specific properties.
+  ```
 
 ## 11-optional.ts
+  ```
   Optional parameters and properties make APIs more flexible and prevent unnecessary code for values that can be omitted.
 
   Optional object properties – using ? to make a property optional in a type definition.
 
   Nullish coalescing (??) – a safe way to provide default values for null or undefined (and not for other falsy values like 0 or '').
+  ```
