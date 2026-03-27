@@ -81,3 +81,10 @@ This file demonstrates using union of string literal types as an alternative to 
 Instead of defining an enum, you directly list the allowed values as a union type.
 
 his approach is often preferred in modern TypeScript because it keeps the type system lightweight without generating runtime JavaScript code
+
+## 07-custom-type-role.ts
+introduces type aliases custom types using the type keyword.
+
+Type aliases allow you to create reusable, descriptive names for any type—whether primitive, union, object, or complex shape.
+
+This improves code readability and maintainability.
