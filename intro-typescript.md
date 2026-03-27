@@ -53,6 +53,10 @@ When placed before a value or variable, typeof returns a string indicating the d
 ## 03-flexible-types.ts
 Illustrates the `any` type, allowing reassignment to different types and showing its flexibility (and risks).
 
+any is a TypeScript type that disables type checking for a variable, allowing it to hold any JavaScript value - strings, numbers, booleans, objects, arrays, or functions - and be reassigned freely between different types without compiler errors.
+
+Defeats TypeScript's purpose - eliminates the main benefit of using TypeScript
+
 ## 04-arrays-objects.ts
 Covers arrays with union types, object typing with nested properties, and the `Record` type for flexible objects.
 

@@ -5,7 +5,7 @@
   },
   "files": [
     "./01-basics.ts",
-    "./03-flexibile-types.ts",
+    "./03-flexible-types.ts",
     "./04-arrays-objects.ts",
     "./05-enum.ts",
     "./06-alternative-to-enum.ts",
