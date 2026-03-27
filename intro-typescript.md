@@ -99,3 +99,10 @@ never is rarely used but valuable for functions that throw or loop forever.
 Function types are written as (param: type) => returnType. Prefer this over the generic Function type for better type safety.
 
 Object methods can be typed using either the arrow syntax (method: () => type) or the shorthand method syntax (method(): type). Both work; pick whichever fits your style.
+
+## 09-special-types.ts
+null represents an intentional absence of a value.
+
+undefined indicates that a variable has been declared but not yet assigned a value.
+
+strictNullChecks is enabled (which is the default in most modern projects), you must explicitly include null or undefined in a union if you want to allow those values.
