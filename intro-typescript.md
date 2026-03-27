@@ -68,3 +68,10 @@ Record type – a utility type that creates object types with consistent key-val
 
 ## 05-enum.ts
 Introduces enums, specifically string enums, and shows how to assign `enum` values properly.
+
+TypeScript feature that allows you to define a set of named constants, making code more readable and self-documenting.
+
+Each member must be initialized with a string or computed value
+
+Useful when you need meaningful string values for serialization or logging.
+
