@@ -3,7 +3,7 @@ function generateError(msg?: string) {
     throw new Error(msg)
 }
 
-generateError("An error occured") // Automatic Semicolon Insertion pitfall - add ; to explicitly tell that this is a function
+generateError("An error occured"); // Automatic Semicolon Insertion pitfall - add ; to explicitly tell that this is a function
 // generateError()
 
 
@@ -16,8 +16,8 @@ generateError("An error occured") // Automatic Semicolon Insertion pitfall - add
     }
 
     let user: User = {
-        name: 'Elmer',
-        age: 31
+        name: 'Aljon',
+        age: 22
     }
 
     user.name

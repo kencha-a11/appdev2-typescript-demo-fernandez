@@ -123,3 +123,10 @@ Introduces enums, specifically string enums, and shows how to assign `enum` valu
 
   Type Casting / Assertion (as)
   Tells TypeScript to treat a value as a specific type (e.g., HTMLInputElement) to access element‑specific properties.
+
+## 11-optional.ts
+  Optional parameters and properties make APIs more flexible and prevent unnecessary code for values that can be omitted.
+
+  Optional object properties – using ? to make a property optional in a type definition.
+
+  Nullish coalescing (??) – a safe way to provide default values for null or undefined (and not for other falsy values like 0 or '').
